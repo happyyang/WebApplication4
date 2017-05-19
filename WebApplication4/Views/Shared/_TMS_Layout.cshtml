@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title="TMS运输管理系统"</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+          
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            </ul>
+                
+            @Html.ActionLink("TMS 运输管理系统","Index","Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+       
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <footer class="bottom text-right">
+            <p><span>@DateTime.Now.Year</span><span>/@DateTime.Now.Month</span><span>/@DateTime.Now.Day</span></p>
+            <p><span>@DateTime.Now.Hour</span><span>:@DateTime.Now.Minute</span><span>:@DateTime.Now.Second</span></p>
+            <p><span>上海安鲜达物流科技有限公司</span></p>
+
+        </footer>
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery");
+    @Scripts.Render("~/bundles/bootstrap");
+    @Scripts.Render("~/bundles/angular_1x");
+</body>
+</html>

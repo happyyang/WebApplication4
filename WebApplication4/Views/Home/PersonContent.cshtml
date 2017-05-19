@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "PersonContent";
+    var dataFile = Server.MapPath("~/App_Data/Person.txt");
+    Array userData = File.ReadAllLines(dataFile);
+
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>PersonContent</h2>
+    <h1>Reading Data from a File</h1>
+    @{ 
+        Ajax.ActionLink("ActionName", "ActionName",null);
+    } 
+    @foreach (string dataLine in userData)
+    {
+        foreach (string dataItem in dataLine.Split(','))
+        {@dataItem <text>&nbsp;</text>}
+        <br />
+    }
+    <select id="mySelect">
+        <option>苹果</option>
+        <option selected="selected">香蕉</option>
+        <option>樱桃</option>
+    </select>
+    <p>@DateTime.Now.Day</p>
+    <p>@DateTime.Now.Hour</p>
+    <p>@DateTime.Now.Minute</p>
+
+    <div ng-app="">
+        <p>名字 : <input type="text" ng-model="name"></p>
+        <h1>Hello {{name}}</h1>
+    </div>
+  
+</body>
+</html>

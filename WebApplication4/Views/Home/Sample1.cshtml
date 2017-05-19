@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Sample1";
+}
+
+<nav class="nav navbar navbar-fixed-top">
+    <div class="container-fluid">
+
+    </div>
+    <text class="text-primary">TMS 运输管理系统</text>
+    <img class="img-responsive  glyphicon-user" alt="Generic placeholder thumbnail" width="40" height="40" />
+</nav>
+
+<div>
+    <button type="button" class="btn btn-success">运单管理</button>
+
+    <button type="button" class="btn  btn-success">车辆管理</button>
+
+    <button type="button" class="btn  btn-success">事件管理</button>
+</div>
+    
+       
+   <div class="list-group">
+       <div class="list-group-item">
+           
+           <button type="button" class="btn btn-primary"> 运单管理</button>
+       </div>
+       <div class="list-group-item">
+           <button type="button" class="btn btn-primary"> 车辆管理</button>
+       </div>
+       <div class="list-group-item">
+           <button type="button" class="btn btn-primary"> 事件管理</button>
+       </div>
+   </div>
+
+<button id="fat-btn" class="btn btn-primary" data-loading-text="Loading..."
+        type="button">
+    加载状态
+</button>
+
+@{ 
+    var NameList = new List<String>();
+    NameList.Add("jack1");
+    NameList.Add("jack2");
+}
+
+
+
+    <table>
+    <thead>人名统计</thead>
+    @foreach (String name in NameList)
+    {
+        <tr>
+            <td>
+                @name
+            </td>
+        </tr>
+
+    }
+</table>
+
+<h2>Sample1</h2>
+
+<div ng-app="" class="row">
+    <input ng-model="name"/>
+    <h3 >sample name:{{name}}</h3>
+</div>
+
